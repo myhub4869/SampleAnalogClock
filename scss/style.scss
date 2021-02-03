@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import "variables";
+@import "mixin";
+@import "reset";
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 1vw;
+    display: flex;
+
+    #clock {
+        border: 1px solid black;
+        width: 50vw;
+        height: 50vw;
+        margin: auto;
+        border-radius: 50%;
+        position: relative;
+
+        @include mobile {
+            width: 75vw;
+            height: 75vw;
+        }
+
+        > div {
+            width: 100%;
+            height: 1em;
+            line-height: 100%;
+            font-size: 1rem;
+            position: absolute;
+            transform-origin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            padding-left: 0.5rem;
+
+            span {
+                width: 1rem;
+                display: block;
+            }
+
+            @for $i from 1 through 12 {
+                $rotate: 120deg + (30 * ($i - 1));
+                &#hour_#{$i} {
+                    transform: rotate($rotate);
+                    span {
+                        transform: rotate(-$rotate);
+                    }
+                }
+            }
+        }
+    }
+}
