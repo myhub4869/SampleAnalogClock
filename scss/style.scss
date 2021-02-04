@@ -2,6 +2,7 @@
 @import "variables";
 @import "mixin";
 @import "reset";
+@import "_key_frame_anime";
 
 body {
     width: 100vw;
@@ -10,7 +11,14 @@ body {
     font-size: 1vw;
     display: flex;
 
+    background: linear-gradient(270deg, #d55a5a, #eeafaf, #e2c3cf);
+    background-size: 300% 300%;
+    -webkit-animation: backgraund-anime 30s ease infinite;
+    -moz-animation: backgraund-anime 30s ease infinite;
+    animation: backgraund-anime 30s ease infinite;
+
     #clock {
+
         border: 1px solid black;
         width: 50vw;
         height: 50vw;
