@@ -43,74 +43,92 @@ body {
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_1 {
         transform: rotate(120deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_1 span {
           transform: rotate(-120deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_2 {
         transform: rotate(150deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_2 span {
           transform: rotate(-150deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_3 {
         transform: rotate(180deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_3 span {
           transform: rotate(-180deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_4 {
         transform: rotate(210deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_4 span {
           transform: rotate(-210deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_5 {
         transform: rotate(240deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_5 span {
           transform: rotate(-240deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_6 {
         transform: rotate(270deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_6 span {
           transform: rotate(-270deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_7 {
         transform: rotate(300deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_7 span {
           transform: rotate(-300deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_8 {
         transform: rotate(330deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_8 span {
           transform: rotate(-330deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_9 {
         transform: rotate(360deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_9 span {
           transform: rotate(-360deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_10 {
         transform: rotate(390deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_10 span {
           transform: rotate(-390deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_11 {
         transform: rotate(420deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_11 span {
           transform: rotate(-420deg); }
       /* line 45, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
       body #clock > div#hour_12 {
         transform: rotate(450deg); }
-        /* line 47, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+        /* line 3, /Users/kenmiya/Desktop/SampleClock/scss/_mixin.scss */
         body #clock > div#hour_12 span {
           transform: rotate(-450deg); }
+      /* line 50, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+      body #clock > div#sec_hand {
+        background: black;
+        height: 1px;
+        width: 50%;
+        transform-origin: right; }
+      /* line 56, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+      body #clock > div#min_hand {
+        background: black;
+        height: 2px;
+        width: 50%;
+        transform-origin: right; }
+      /* line 62, /Users/kenmiya/Desktop/SampleClock/scss/style.scss */
+      body #clock > div#hour_hand {
+        background: black;
+        height: 4px;
+        width: 50%;
+        transform-origin: right; }
 
 /*# sourceMappingURL=style.css.map */

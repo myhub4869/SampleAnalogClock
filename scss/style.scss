@@ -43,11 +43,27 @@ body {
             @for $i from 1 through 12 {
                 $rotate: 120deg + (30 * ($i - 1));
                 &#hour_#{$i} {
-                    transform: rotate($rotate);
-                    span {
-                        transform: rotate(-$rotate);
-                    }
+                    @include number-rotate($rotate);
                 }
+            }
+
+            &#sec_hand {
+                background: black;
+                height: 1px;
+                width: 50%;
+                transform-origin: right;
+            }
+            &#min_hand {
+                background: black;
+                height: 2px;
+                width: 50%;
+                transform-origin: right;
+            }
+            &#hour_hand {
+                background: black;
+                height: 4px;
+                width: 50%;
+                transform-origin: right;
             }
         }
     }

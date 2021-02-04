@@ -1,4 +1,10 @@
-@mixin number-rotate {}
+@mixin number-rotate($rotate) {
+    transform: rotate($rotate);
+    span {
+        transform: rotate(-$rotate);
+    }
+
+}
 
 @mixin pc {
   @media( max-width: ($pc)) {
