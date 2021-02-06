@@ -32,16 +32,16 @@ body {
         }
 
         > div {
-            width: 100%;
+            width: 50%;
             height: 1em;
             line-height: 100%;
             font-size: 4em;
             position: absolute;
-            transform-origin: center;
+            transform-origin: right;
             margin: auto;
             top: 0;
             bottom: 0;
-            padding-left: 3rem;
+            padding-left: 2rem;
 
             @include mobile {
                 font-size: 4em;
@@ -52,6 +52,7 @@ body {
                 width: 1rem;
                 display: block;
                 font-family: 'Playfair Display', serif;
+                font-style: italic;
             }
 
             @for $i from 1 through 12 {

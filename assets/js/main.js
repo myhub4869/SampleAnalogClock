@@ -28,10 +28,19 @@ function getClock() {
     var degH = ( now.getHours() * (360 / 12) + now.getMinutes() * (360 / 12 / 60) + 90);
     var degM = ( now.getMinutes() * (360 / 60) ) + 90;
     var degS = ( now.getSeconds() * (360 / 60) ) + 90;
+    if( degH > 360 ) {
+        degH -= 360;
+    }
+    if( degM > 360 ) {
+        degM -= 360;
+    }
+    if( degS > 360 ) {
+        degS -= 360;
+    }
 
-    sec_hand.style.transform = `rotate(${degS}deg)`;
-    min_hand.style.transform = `rotate(${degM}deg)`;
     hour_hand.style.transform = `rotate(${degH}deg)`;
+    min_hand.style.transform = `rotate(${degM}deg)`;
+    sec_hand.style.transform = `rotate(${degS}deg)`;
 
     timer = setTimeout(function() {
         getClock();
