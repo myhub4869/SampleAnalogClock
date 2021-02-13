@@ -1,85 +1,96 @@
-@charset "utf-8";
+@import "reset";
 @import "variables";
 @import "mixin";
-@import "reset";
-@import "_key_frame_anime";
+
+@include bg-gradient(morning,$morning-colors);
+@include bg-gradient(afternoon,$afternoon-colors);
+@include bg-gradient(evning,$evning-colors);
+@include bg-gradient(night,$night-colors);
 
 body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    font-size: 1vw;
-    display: flex;
-
-    background: linear-gradient(270deg, #d55a5a, #eeafaf, #e2c3cf);
-    background-size: 300% 300%;
-    -webkit-animation: backgraund-anime 30s ease infinite;
-    -moz-animation: backgraund-anime 30s ease infinite;
-    animation: backgraund-anime 30s ease infinite;
-
-    #clock {
-
-        border: 1px solid black;
-        width: 50vw;
-        height: 50vw;
-        margin: auto;
-        border-radius: 50%;
-        position: relative;
-
-        @include mobile {
-            width: 75vw;
-            height: 75vw;
-        }
-
-        > div {
-            width: 50%;
-            height: 1em;
-            line-height: 100%;
-            font-size: 4em;
-            position: absolute;
-            transform-origin: right;
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            padding-left: 2rem;
-
-            @include mobile {
-                font-size: 4em;
-                padding-left: 1rem;
-            }
-
-            span {
-                width: 1rem;
-                display: block;
-                font-family: 'Playfair Display', serif;
-                font-style: italic;
-            }
-
-            @for $i from 1 through 12 {
-                $rotate: 120deg + (30 * ($i - 1));
-                &#hour_#{$i} {
-                    @include number-rotate($rotate);
-                }
-            }
-
-            &#sec_hand {
-                background: black;
-                height: 1px;
-                width: 50%;
-                transform-origin: right;
-            }
-            &#min_hand {
-                background: black;
-                height: 2px;
-                width: 50%;
-                transform-origin: right;
-            }
-            &#hour_hand {
-                background: black;
-                height: 4px;
-                width: 50%;
-                transform-origin: right;
-            }
-        }
+    @include full-screen {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 62.5%;
+        color: $main-color;
     }
+
+	#particles-js {
+        @include full-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+	}
+
+	article {
+		width: 55vw;
+		height: 55vw;
+		
+		@include mobile {
+			width: 75vw;
+			height: 75vw;
+		}
+		
+		.clock {
+            @include font-setting($font-board);
+			width: 100%;
+			height: 100%;
+			border: 2px solid $main-color;;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			position: relative;
+
+			.board {
+				display: flex;
+				justify-content: center;
+
+				div {
+					width: 10%;
+					height: 50%;
+					position: absolute;
+					text-align: center;
+					font-size: 3.5rem;
+					padding-top: 0.1em;
+					
+					@include mobile {
+						font-size: 2.8rem;
+					}
+				}
+
+                @for $i from 1 through 12 {
+                    $rotate: (30deg * ($i - 1));
+                    .num-#{$i} {
+                        @include number-rotate($rotate);
+                    }
+                }
+			}
+
+			/*board end*/
+			#minutes,
+			#hour,
+			#second {
+				width: 10%;
+				height: 50%;
+				position: absolute;
+				transform-origin: bottom center;
+			}
+		}
+
+		/*clock end*/
+		#date {
+            @include font-setting($font-date, 1.3rem);
+			text-align: center;
+			font-weight: 300;
+			margin-top: 0.7em;
+			letter-spacing: 2px;
+		}
+	}
+
+	/*article end*/
 }
+
+/*body end*/

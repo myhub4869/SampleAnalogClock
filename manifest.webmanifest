@@ -1,47 +1,47 @@
 {
 	"lang"				: "ja_JP" ,
-	"name"				: "CatTodoList" ,
-	"short_name"		: "ねこメモ" ,
+	"name"				: "Clock" ,
+	"short_name"		: "Clock" ,
 	"start_url"			: "/index.html" ,
 	"display"			: "standalone" ,
 	"orientation"		: "portrait-primary" ,
 	"theme_color"		: "#2c3e50" ,
 	"background_color"	: "#10171d" ,
-	"status_bar"		: "default" ,
+	"status_bar"		: "black-translucent" ,
 	"icons"				: [
 		{
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/assets/images/icons/sb-512.png" ,
+			"href"	: "/images/icon/icon-512.png" ,
 			"sizes"	: "512x512" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/assets/images/icons/sb-152.png" ,
+			"href"	: "/images/icon/icon-152.png" ,
 			"sizes"	: "152x152" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/assets/images/icons/sb-144.png" ,
+			"href"	: "/images/icon/icon-144.png" ,
 			"sizes"	: "144x144" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/assets/images/icons/sb-128.png" ,
+			"href"	: "/images/icon/icon-128.png" ,
 			"sizes"	: "128x128" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/assets/images/icons/sb-120.png" ,
+			"href"	: "/images/icon/icon-120.png" ,
 			"sizes"	: "120x120" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/assets/images/icons/sb-76.png" ,
+			"href"	: "/images/icon/icon-76.png" ,
 			"sizes"	: "76x76" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/assets/images/icons/sb-60.png" ,
+			"href"	: "/images/icon/icon-60.png" ,
 			"sizes"	: "60x60" ,
 			"type"	: "image/png"
 		}

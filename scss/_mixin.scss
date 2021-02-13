@@ -1,23 +1,54 @@
+@mixin bg-gradient($name, $colors) {
+    ##{$name} .bg-gradient {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: -1000;
+        background: linear-gradient(247deg, nth($colors, 1), nth($colors, 2), nth($colors, 3));
+        background-size: 600% 600%;
+        -webkit-animation: AnimationName 30s ease infinite;
+        -moz-animation: AnimationName 30s ease infinite;
+        animation: AnimationName 30s ease infinite;
+    }
+}
+
 @mixin number-rotate($rotate) {
     transform: rotate($rotate);
+    transform-origin: bottom center;
     span {
+        display: block;
         transform: rotate(-$rotate);
     }
-
 }
+
+@mixin full-screen {
+    width: 100vw;
+    height: 100vh;
+    @content;
+}
+
+@mixin font-setting($famiry, $size: 1em) {
+    font-family: $famiry;
+    font-size: $size;
+}
+
+/*メディアクエリ
+*/
 
 @mixin pc {
-  @media( max-width: ($pc)) {
-    @content;
-  }
+    @media( max-width: ($pc)) {
+        @content;
+    }
 }
+
 @mixin tablet {
-  @media( max-width: ($tablet)) {
-    @content;
-  }
+    @media( max-width: ($tablet)) {
+        @content;
+    }
 }
+
 @mixin mobile {
-  @media( max-width: ($mobile)) {
-    @content;
-  }
+    @media( max-width: ($mobile)) {
+        @content;
+    }
 }

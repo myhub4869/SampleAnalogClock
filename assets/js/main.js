@@ -1,7 +1,9 @@
+var weekAry = [ "日", "月", "火", "水", "木", "金", "土" ];
 var timer;
 var sec_hand;
 var min_hand;
 var hour_hand;
+var dayArea;
 
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
@@ -25,9 +27,9 @@ function getMeta( name, content ) {
 
 function getClock() {
     var now = new Date();
-    var degH = ( now.getHours() * (360 / 12) + now.getMinutes() * (360 / 12 / 60) + 90);
-    var degM = ( now.getMinutes() * (360 / 60) ) + 90;
-    var degS = ( now.getSeconds() * (360 / 60) ) + 90;
+    var degH = ( now.getHours() * (360 / 12) + now.getMinutes() * (360 / 12 / 60));
+    var degM = ( now.getMinutes() * (360 / 60) );
+    var degS = ( now.getSeconds() * (360 / 60) );
     if( degH > 360 ) {
         degH -= 360;
     }
@@ -41,6 +43,13 @@ function getClock() {
     hour_hand.style.transform = `rotate(${degH}deg)`;
     min_hand.style.transform = `rotate(${degM}deg)`;
     sec_hand.style.transform = `rotate(${degS}deg)`;
+
+    var year = now.getFullYear();
+    var mon  = ( "00" + now.getMonth() ).slice( -2 );
+    var day  = ( "00" + now.getDate() ).slice( -2 );
+    var week = weekAry[ now.getDay() ];
+
+	dayArea.innerHTML = `<p>${year}.${mon}.${day}(${week})</p>`;
 
     timer = setTimeout(function() {
         getClock();
@@ -71,8 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    sec_hand = document.getElementById( "sec_hand" );
-    min_hand = document.getElementById( "min_hand" );
-    hour_hand = document.getElementById( "hour_hand" );
+    sec_hand = document.getElementById( "second" );
+    min_hand = document.getElementById( "minutes" );
+    hour_hand = document.getElementById( "hour" );
+	dayArea = document.getElementById( "date" );
     getClock();
 });
