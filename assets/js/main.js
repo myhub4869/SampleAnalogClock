@@ -51,6 +51,16 @@ function getClock() {
 
 	dayArea.innerHTML = `<p>${year}.${mon}.${day}(${week})</p>`;
 
+    if( now.getHours() >= 0 && now.getHours() <= 5 ) {
+        document.querySelector('body').id = "morning";
+    } else if( now.getHours() >= 6 && now.getHours() <= 12 ) {
+        document.querySelector('body').id = "afternoon";
+    } else if( now.getHours() >= 13 && now.getHours() <= 18 ) {
+        document.querySelector('body').id = "evning";
+    } else if( now.getHours() >= 19 && now.getHours() <= 23 ) {
+        document.querySelector('body').id = "night";
+    }
+    
     timer = setTimeout(function() {
         getClock();
     }, 500);
