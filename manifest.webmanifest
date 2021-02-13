@@ -11,37 +11,37 @@
 	"icons"				: [
 		{
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/images/icon/icon-512.png" ,
+			"href"	: "/assets/images/icon/icon-512.png" ,
 			"sizes"	: "512x512" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/images/icon/icon-152.png" ,
+			"href"	: "/assets/images/icon/icon-152.png" ,
 			"sizes"	: "152x152" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/images/icon/icon-144.png" ,
+			"href"	: "/assets/images/icon/icon-144.png" ,
 			"sizes"	: "144x144" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/images/icon/icon-128.png" ,
+			"href"	: "/assets/images/icon/icon-128.png" ,
 			"sizes"	: "128x128" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/images/icon/icon-120.png" ,
+			"href"	: "/assets/images/icon/icon-120.png" ,
 			"sizes"	: "120x120" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/images/icon/icon-76.png" ,
+			"href"	: "/assets/images/icon/icon-76.png" ,
 			"sizes"	: "76x76" ,
 			"type"	: "image/png"
 		} , {
 			"rel"	: "apple-touch-icon" ,
-			"href"	: "/images/icon/icon-60.png" ,
+			"href"	: "/assets/images/icon/icon-60.png" ,
 			"sizes"	: "60x60" ,
 			"type"	: "image/png"
 		}
