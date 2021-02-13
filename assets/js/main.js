@@ -70,24 +70,31 @@ document.addEventListener("DOMContentLoaded", function () {
     readTextFile( "./manifest.webmanifest", function( text ) {
         var data = JSON.parse(text);
         var head = document.getElementsByTagName("head")[0];
-        head.appendChild( getMeta( "apple-mobile-web-app-title", data.name ) );
-        head.appendChild( getMeta( "mobile-web-app-title", data.name ) );
 
+        for (let [key, value] of Object.entries(data)) {
+            console.log(key);
+            console.log(value);
+            if( key === "name" ) {
+                head.appendChild( getMeta( "apple-mobile-web-app-title", data.name ) );
+                head.appendChild( getMeta( "mobile-web-app-title", data.name ) );
+            } else if( key === "status_bar" ) {
+                var statusBar = ( data.status_bar === "" ) ? "default" : data.status_bar;
+                head.appendChild( getMeta( "apple-mobile-web-app-status-bar-style", statusBar ) );
+                head.appendChild( getMeta( "mobile-web-app-status-bar-style", statusBar ) );
+            } else if( key === "icons" ) {
+                data.icons.forEach(function(element){
+                    var meta = document.createElement( "link" );
+                    for (let [key, value] of Object.entries(element)) {
+                        meta.setAttribute( key, value );
+                    }
+                    head.appendChild( meta );
+                });
+            }
+            head.appendChild( getMeta( key, value ) );
+        }
         var display = ( data.display === "standalone" ) ? "yes" : "no";
         head.appendChild( getMeta( "apple-mobile-web-app-capable", display ) );
         head.appendChild( getMeta( "mobile-web-app-capable", display ) );
-
-        var statusBar = ( data.status_bar === "" ) ? "default" : data.status_bar;
-        head.appendChild( getMeta( "apple-mobile-web-app-status-bar-style", statusBar ) );
-        head.appendChild( getMeta( "mobile-web-app-status-bar-style", statusBar ) );
-
-        data.icons.forEach(function(element){
-            var meta = document.createElement( "link" );
-            for (let [key, value] of Object.entries(element)) {
-                meta.setAttribute( key, value );
-            }
-            head.appendChild( meta );
-        });
     });
 
     sec_hand = document.getElementById( "second" );
