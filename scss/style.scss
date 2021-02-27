@@ -1,6 +1,7 @@
 @import "reset";
 @import "variables";
 @import "mixin";
+@import "key_frame_anime";
 
 @include bg-gradient(morning,$morning-colors);
 @include bg-gradient(afternoon,$afternoon-colors);
