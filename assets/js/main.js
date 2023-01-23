@@ -89,8 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     head.appendChild( meta );
                 });
+            } else {
+                head.appendChild( getMeta( key, value ) );
             }
-            head.appendChild( getMeta( key, value ) );
         }
         var display = ( data.display === "standalone" ) ? "yes" : "no";
         head.appendChild( getMeta( "apple-mobile-web-app-capable", display ) );

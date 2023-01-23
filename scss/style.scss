@@ -64,7 +64,7 @@ body {
 				}
 
                 @for $i from 1 through 12 {
-                    $rotate: (30deg * ($i - 1));
+                    $rotate: (30deg * $i);
                     .num-#{$i} {
                         @include number-rotate($rotate);
                     }
