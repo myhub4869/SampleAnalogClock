@@ -47,6 +47,6 @@
 		}
 	] ,
 	"serviceworker"	: {
-		"src"	: "/js/serviceWorker.js"
+		"src"	: "/assets/js/registerServiceWorker.js"
 	}
 }
