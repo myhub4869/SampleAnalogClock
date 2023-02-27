@@ -90,10 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     head.appendChild( meta );
                 });
             } else if( key === "serviceworker" ) {
-                var script;
-                script = document.createElement( "script" );
-                script.setAttribute( "src", value.src );
-                head.appendChild( script );
+                // var script;
+                // script = document.createElement( "script" );
+                // script.setAttribute( "src", value.src );
+                // head.appendChild( script );
             } else {
                 head.appendChild( getMeta( key, value ) );
             }
