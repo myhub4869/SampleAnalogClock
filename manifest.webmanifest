@@ -1,7 +1,7 @@
 {
 	"lang"				: "ja_JP" ,
-	"name"				: "Clock" ,
-	"short_name"		: "Clock" ,
+	"name"				: "ana_clock" ,
+	"short_name"		: "ana_clock" ,
 	"start_url"			: "/index.html" ,
 	"display"			: "standalone" ,
 	"orientation"		: "portrait-primary" ,
