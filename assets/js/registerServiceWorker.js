@@ -9,6 +9,12 @@ const registerServiceWorker = async () => {
       );
       if (registration.installing) {
         console.log('Service worker installing');
+        navigator.serviceWorker.register(value.src).then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // Service Workerの登録に失敗したときの処理をここに記述します。
+          console.log('ServiceWorker registration failed: ', err);
+        })
       } else if (registration.waiting) {
         console.log('Service worker installed');
       } else if (registration.active) {
