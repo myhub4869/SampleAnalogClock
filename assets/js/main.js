@@ -67,7 +67,7 @@ function getClock() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    readTextFile( "./manifest.webmanifest", function( text ) {
+    readTextFile( "./manifest.json", function( text ) {
         var data = JSON.parse(text);
         var head = document.getElementsByTagName("head")[0];
 
