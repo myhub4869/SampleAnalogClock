@@ -7,6 +7,7 @@ const registerServiceWorker = async () => {
           scope: '/assets/js/',
         }
       );
+      console.log(registration);
       if (registration.installing) {
         console.log('Service worker installing');
         navigator.serviceWorker.register(value.src).then(function(registration) {
