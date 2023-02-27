@@ -35,7 +35,12 @@ body {
 			width: 75vw;
 			height: 75vw;
 		}
-		
+	
+		header {
+			position: absolute;
+			z-index: 9999;
+		}
+
 		.clock {
             @include font-setting($font-board);
 			width: 100%;

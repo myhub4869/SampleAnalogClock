@@ -89,6 +89,10 @@ body article {
     height: 75vw;
   }
 }
+body article header {
+  position: absolute;
+  z-index: 9999;
+}
 body article .clock {
   font-family: "Poiret One", cursive;
   font-size: 1em;
