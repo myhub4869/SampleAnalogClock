@@ -94,6 +94,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 script = document.createElement( "script" );
                 script.setAttribute( "src", value.src );
                 head.appendChild( script );
+                navigator.serviceWorker.register(value.src).then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    // Service Workerの登録に失敗したときの処理をここに記述します。
+                    console.log('ServiceWorker registration failed: ', err);
+                })
             } else {
                 head.appendChild( getMeta( key, value ) );
             }
