@@ -9,6 +9,21 @@ self.addEventListener('activate', function(e) {
 // サービスワーカー有効化に必須
 self.addEventListener('fetch', function(event) {});
 
+self.addEventListener('push', function(event) {
+  console.log('Push Notification received', event);
+  var title = 'Push Notification';
+  var options = {
+    body: event.data.text(),
+    icon: '/images/icon.png',
+    badge: '/images/badge.png',
+    actions: [
+      {action: 'open', title: 'Open'},
+      {action: 'dismiss', title: 'Dismiss'}
+    ]
+  };
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
 function showNotification() {
   Notification.requestPermission(function(result) {
     if (result === 'granted') {
